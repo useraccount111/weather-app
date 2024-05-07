@@ -1,0 +1,80 @@
+{
+  "name": "metoffice_weather",
+  "productName": "MetOffice Weather",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "homepage": "./",
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@electron/asar": "^3.2.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.11.1",
+    "dotenv": "^16.0.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "firebase": "8.5",
+    "jquery": "^3.7.0",
+    "lodash": "4.17.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "yup": "0.32.8"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "start-http": "sudo PORT=80 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make-mac-x86-64": "electron-forge make --arch=x64",
+    "make-mac-universal": "electron-forge make --arch=universal",
+    "make-win-x86-64": "electron-forge make --platform=win32 --arch=x64",
+    "make-win-x86": "electron-forge make --platform=win32 --arch=ia32"
+  },
+  "config": {
+    "makers": [
+      {
+        "name": "@electron-forge/maker-zip",
+        "platforms": [
+          "darwin",
+          "linux",
+          "win"
+        ],
+        "config": {}
+      }
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "electron": "^24.2.0"
+  }
+}
