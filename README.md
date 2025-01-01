@@ -28,6 +28,7 @@ See this excerpt from `package.json` at lines `27-40`:
     "make": "electron-forge make",
     "make-mac-x86-64": "electron-forge make --arch=x64",
     "make-mac-universal": "electron-forge make --arch=universal",
+    "make-mac-arm64": "electron-forge make --arch=arm64",
     "make-win-x86-64": "electron-forge make --platform=win32 --arch=x64",
     "make-win-x86": "electron-forge make --platform=win32 --arch=ia32"
   },
@@ -36,7 +37,7 @@ See this excerpt from `package.json` at lines `27-40`:
 ### Mac options
 + Pick `make-mac-x86-64` to make an x86_64 application. (This may be run on Apple Silicon + Rosetta 2 albeit slower than a Universal/Native version.)
 + Pick `make-mac-universal` to make an application that is compatible with both x86_64 and Apple Silicon.
-+ Pick `make-mac-x86-64` to make an Apple Silicon only application.
++ Pick `make-mac-arm64` to make an Apple Silicon only application.
 ### Windows options
 + Pick `make-win-x86-64` to make an x86_64 application for Windows (64-bit).
 + Pick `make-win-x86` to make an x86 application (32-bit).
